@@ -1,0 +1,124 @@
+body{
+
+font-family: 'Merriweather', serif;
+background-image: url("../static/bg2.jpg");
+background-attachment: fixed;
+}
+
+
+
+/**Home page restaurant names **/
+
+.restaurant_list {
+
+background-image:url("back_rest.jpg");
+background-repeat:repeat;
+background-size: cover;
+text-align: center;
+border-radius: 25px;
+}
+
+
+/**top menu for login and show**/
+.menu_top{
+
+  margin-top: 15px;
+
+}
+
+.menu_top a{
+
+
+  color:#ffffff;
+}
+
+
+
+/**the message show with edit and new itemb**/
+.Alert_top{
+
+  text-align: center;
+  border-radius: 20px;
+  padding: 15px;
+  background-color: #fff;
+
+}
+
+/**the class for menu items page**/
+
+.menu_items{
+
+  background-image: url("../static/menu3.jpg");
+  background-attachment: fixed;
+  color: #930017;
+  font-size: 40px;
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+}
+
+
+/** the class for edit irem page **/
+.edit_item{
+  border: 2px solid;
+  border-radius: 15px;
+  margin-top: 15px;
+  border-color: #999999;
+  background-image: url("../static/edit_new2.jpg");
+  background-repeat:repeat;
+  background-size: cover;
+  color: #fff;
+  
+
+}
+
+
+/**the class for delete item page**/
+.delete_item{
+  text-align: center;
+  color:#999;
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+}
+
+/**the class for new item page**/
+.new_item{
+  border: 2px solid;
+  border-radius: 15px;
+  margin-top: 15px;
+  border-color: #999999;
+  color: #fff;
+  background-image: url("../static/edit_new2.jpg");
+}
+
+/**button new item**/
+.btn_new{
+
+  border-radius: 20px;
+  margin-top: 25px;
+}
+
+
+/**button edit item**/
+.btn_edit{
+
+border-radius: 15px;
+margin-top:-15px;
+
+
+}
+
+/** button in under menu page **/
+.btn_restaurants{
+
+  margin: 10px;
+}
+
+
+/** login section **/
+
+.login{
+
+ 
+}
+

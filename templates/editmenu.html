@@ -1,0 +1,138 @@
+{% extends "main.html" %}
+{% block content %}
+{% include "header.html" %}
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!--Font Awsome-->
+        <script src="https://kit.fontawesome.com/e11490dc89.js"></script>
+        <!--Google Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather&display=swap" rel="stylesheet">
+        <!--main CSS-->
+        	<link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+
+
+
+
+
+      <div class="container  Alert_top">
+
+        <div class="row">
+
+          <div class="col-md-12">
+
+
+                <h1>Add the new data in this form</h1>
+          </div>
+
+        </div>
+
+      </div>
+
+
+
+<div class="container edit_item">
+
+  <div class="row">
+
+    <div class="col-md-12">
+
+      <form class="form-group" action='{{url_for('editMenuItem',restaurant_id=restaurant_id,menu_id=i.id)}}' method='post'>
+
+      <ul>
+      <label>Name:</label>
+      <li><input  class="form-control" type='text' name='name' size='8' placeholder='{{i.name}}'></li>
+      </br>
+
+
+      <label>Price:</label>
+      <li><input  class="form-control" type='text' name='price' size='8' placeholder='{{i.price}}'></li>
+      </br>
+
+
+
+
+
+      <label>Description:</label>
+      <li><textarea class="form-control"  rows="3" type='text' name='description' size='20' placeholder='{{i.description}}'></textarea></li>
+      </br>
+
+
+
+      <label>Course</label>
+
+
+      {% if i.course == 'fishes' %}
+      <li><input  class="form-control" type='radio' name='course' value='fishes' checked>Fishes</li>
+      {% else %}
+      <li><input   class="form-control"  type='radio' name='course' value='Fishes'>Fishes</li>
+      {% endif %}
+
+
+
+      {% if i.course == 'meats' %}
+      <li><input  class="form-control" type='radio' name='course' value='meats' checked>Meats</li>
+      {% else %}
+      <li><input   class="form-control" type='radio' name='course' value='meats'>Meats</li>
+      {% endif %}
+
+
+
+      {% if i.course == 'vegetables' %}
+      <li><input  class="form-control" type='radio' name='course' value='vegetables' checked>fishes</li>
+      {% else %}
+      <li><input   class="form-control" type='radio' name='course' value='vegetables'>fishes</li>
+      {% endif %}
+
+      {% if i.course == 'pizza' %}
+      <li><input   class="form-control" type='radio' name='course' value='pizza' checked>pizza</li>
+      {% else %}
+      <li><input   class="form-control" type='radio' name='course' value='pizza'>pizza</li>
+      {% endif %}
+
+
+
+
+
+      </ul>
+
+      <button type="submit" class="btn btn-primary btn-lg btn-block btn_edit" value="edit" name="button">Edit</button>
+      <br>
+
+      <a href='{{url_for('restaurantMenu', restaurant_id=i.restaurant_id)}}'><button type="button" class="btn btn-primary btn-lg btn-block btn_edit">Cancel</button></a>
+
+
+      </form>
+
+
+    </div>
+
+  </div>
+
+
+
+</div>
+
+{% endblock %}
+
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
