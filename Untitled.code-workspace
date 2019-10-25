@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "/Users/fullstack/Documents/PROJECTS/twitter/twitter"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "thewords"
+	}
+}
